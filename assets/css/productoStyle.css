@@ -32,178 +32,6 @@
     background-color: rgba(119, 235, 25, 0.295);
 }
 
-/*========================================================
-=                   CARRITO DE COMPRAS                   =
-========================================================*/
-
-
-.card-carrito{
-    /* width: 85%; */
-    display: flex;
-    flex-direction: column;
-    border-radius: inherit;
-    margin: auto;
-    margin-top: 20px;
-    padding: 5px;
-    /* background-color: rgb(236, 236, 236); */
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
-}
-
-
-
-
-/* CARD CARRITO HEAD
--------------------------------------------------- */
-
-.carrito-card-head{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 8px;
-}
-
-
-.carrito-img-prod{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5px;
-    /* width: 30%; */
-}
-
-.carrito-img-prod img{
-    border-radius: 20px;
-    width: 130px;
-    height: 130px;
-    object-fit: contain;
-}
-
-.carrito-prod-desc h4, h5{
-    /* color: black; */
-    font-weight: 500;
-    margin: 0 0 10px 0;
-}
-
-.carrito-prod-desc p{
-    color: black;
-    margin: 0 0 10px 0;
-}
-
-.inputPrecio{
-    width: 65px;
-    border: none;
-    text-align: center;
-}
-
-.btnQuantity{
-    margin: 0;
-    border: none;
-    width: 30px;
-    background-color: #ffffff;
-    font-weight: bold;
-
-}
-
-.carrito-prod-desc{
-    display: inline-block;
-    flex-direction: column;
-    /* width: 70%; */
-}
-
-.cantidadProducto{
-    height: 40px;
-    /* width: max-content; */
-    display: flex;
-    border: solid;
-    border-width: 1px;
-    border-color: rgb(179 176 176);
-}
-
-.cantidad-precio{
-    display: grid;
-    gap: 10px;
-    justify-content: left;
-    align-items: baseline;
-}
-
-
-/* CARD CARRITO FOOTER
--------------------------------------------------- */
-
-.carrito-card-footer{
-    /* display: flex;
-    gap: 10px;
-    align-items: baseline; */
-    margin-top: 18px;
-    display: flex;
-    width: 95%;
-    gap: 15px;
-    align-items: baseline;
-    justify-content: right;
-    /* justify-content: space-between; */
-}
-
-.subtotal-footer{
-    font-size: 20px; 
-    color:black
-}
-
-@media screen and (min-width: 510px) {
-    .cantidad-precio{
-        display: flex;
-    
-    }
-}
-
-
-.card-subtotal{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: inherit;
-    padding: 20px;
-    margin-top: 20px;
-    position: sticky;
-    top: 90px;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
-    height: fit-content;
-}
-
-.card-subtotal p{
-    font-size: 20px;
-    color: black;
-    font-weight: 500;
-}
-
-.carrito-section{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-}
-
-.tittle-button{
-    display: grid;
-    grid-template-columns: 9fr 1fr;
-    align-items: baseline;
-}
-
-.tittle-button button{
-    font-size: 22px;
-}
-
-.tittle-button button:hover{
-    font-size: 24px;
-    color: #e91e63;
-}
-
-@media screen and (min-width: 210px) {
-    .card-subtotal{
-        position: sticky;
-        bottom: 0;
-    
-    }
-}
-
 /*=============================================
 =                   FAVORITOS                   =
 =============================================*/
@@ -211,12 +39,14 @@
 .cardContainer{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 15px;
+    gap: 19px;
+    width: 100%;
     border-radius: 10px;
     margin: auto;
+    margin-top: 25px;
     padding: 15px;
     background-color: white;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+    box-shadow: 5px 9px 21px 0px rgb(0 0 0 / 77%);
 }
 
 /* CONTENIDO DE LA CARD
@@ -235,8 +65,7 @@
     width: 120px;
     height: 120px;
     object-fit: contain;
-    -webkit-box-shadow: 0px 5px 7px 3px rgba(0,0,0,0.67); 
-    box-shadow: 0px 5px 7px 3px rgba(0,0,0,0.67);
+    box-shadow: 6px 7px 27px 0px rgba(0,0,0,0.64);
 }
 
 
@@ -262,6 +91,15 @@
     flex-direction: column;
 }
 
+.precioButton p{
+    color: #000000;
+    font-weight: bold;
+}
+
+.precioButton span{
+    font-weight: 100;
+}
+
 .precioButton{
     display: flex;
     gap: 10px;
@@ -269,12 +107,12 @@
     flex-direction: column;
 }
 
-.precioButton button{
+.addCart{
     color: #fff;
     background-color: #f14781ed;
 }
 
-.precioButton button:hover{
+.addCart:hover{
     color: #fff;
     font-size: 13px;
     background-color: #e91e63;
@@ -285,42 +123,106 @@
         width: 160px;
         height: 160px;
     }
+
+    
 }
 
-/* @media screen and (min-width: 480px) {
-    .cardImg{
-        width: 180px;
+@media screen and (min-width: 900px) {
+    .cardContainer{
+        width: 90%;
+    } 
+}
+
+@media screen and (min-width: 1280px) {
+    .cardContainer{
+        width: 70%;
     }
-} */
+}
 
 /*=============================================
-=                   PAYMENT                   =
+=                   CARRITO                   =
 =============================================*/
 
-.containerPayment{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.piezasSelect{
+    height: 35px;
+    display: flex;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(202, 196, 196);
 }
 
-.datosCliente{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+.btnCantidad{
+    margin: none;
+    border: none;
+    font-size: 13px;
 }
 
-.inputRegistro{
+.btnCantidad:hover{
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+.inputCantidadCarrito{
+    width: 65px;
+    border: none;
+    text-align: center;
+}
+
+.inputCantidadCarrito:active{
+    border: none;
+}
+.inputCantidadCarrito:focus{
+    outline: none;
+}
+
+.cardFooter{
+    display: flex;
+    justify-content: center;
+}
+
+.subtotal-footer{
+    margin-bottom: 0;
+    font-size: 20px;
+    color: #000000;
+}
+
+.subtotal-footer span{
+    font-weight: bold;
+}
+
+.card-subtotal{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    position: sticky;
+    bottom: 0px;
+    box-shadow: 5px 9px 21px 0px rgb(0 0 0 / 77%);
+    height: fit-content;
 }
 
-.inputRegistro label{
-    text-transform: uppercase;
+.card-subtotal p{
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
 }
 
-@media screen and (min-width: 800px) {
-    .datosCliente{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+@media screen and (min-width: 767px) {
+    .card-subtotal{
+        top: 90px;
     }
+}
+
+@media screen and (min-width: 1200px) {
+    .cardCarrito{
+        width: 90%;
+    }
+}
+
+[data-tittle]{
+    font-size: 40px;
+    color: red;
 }
