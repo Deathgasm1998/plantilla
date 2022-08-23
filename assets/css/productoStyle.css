@@ -1,3 +1,10 @@
+:root{
+    /* --payment-card-bg-color: #f1f1f1; */
+    --payment-card-bg-color: #ffffff;
+    --primary-color-plantilla: #e91e63;
+    --primary-color-plantilla-low: #f14781ed;
+}
+
 .card-producto{
     gap: 15px;
 }
@@ -52,7 +59,7 @@
 /* CONTENIDO DE LA CARD
 -------------------------------------------------- */
 
-.cardContainer figure{
+.figureCard{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,7 +229,288 @@
     }
 }
 
-[data-tittle]{
-    font-size: 40px;
-    color: red;
+
+/*=============================================
+=                   PAYMENT                   =
+=============================================*/
+
+.containerPayment{
+    display: grid;
+    /* grid-template-columns: 3fr 1fr; */
+    gap: 23px;
+}    
+
+.card{
+    align-items: center;
 }
+
+/* DIRECCIONES
+-------------------------------------------------- */
+
+.containerDirProd{
+    flex-direction: column;
+    display: flex;
+    gap: 15px;
+}    
+
+.markerCardContainer{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding: 10px 0;
+    gap: 5px;
+    background-color: var(--payment-card-bg-color);
+    border-radius: 12px;
+    box-shadow: 7px 8px 10px -5px #b3b3b3;
+}    
+
+.figureMarker{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}    
+
+.imgMarker{
+    width: 65px;
+    height: 65px;
+    padding: 5px;
+    box-shadow: 3px 1px 7px -2px #000000;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}    
+
+.paymentDomicilio {
+    padding: 0 5px;
+}    
+
+.paymentDomicilio p{
+    margin: 0 0 7px 0;
+    color: #707070;
+    font-size: 14px;
+}    
+
+.paymentDomicilio select{
+    font-size: 14px;
+}    
+
+.direccionActions button{
+    border: none;
+    text-decoration: underline;
+    color: blue;
+    padding-left: 0;
+    background-color: transparent;
+}    
+
+/* PRODUCTOS
+-------------------------------------------------- */
+.payProductCardContainer{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding: 10px 2px;
+    gap: 5px;
+    background-color: var(--payment-card-bg-color);
+}  
+
+.payTittleProducts{
+    display: none;
+}
+
+.paymentProductos{
+    background-color: var(--payment-card-bg-color);
+    padding: 10px;
+    display: none;
+    border-radius: 12px;
+    box-shadow: 7px 8px 10px -5px #b3b3b3;
+}
+
+.figureProduct{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.imgPaymentProduct{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.paymentDetailProduct p,h5{
+    margin: 0;
+}
+
+.paymentDetailProduct .tittle{
+    font-size: 16px;
+}
+
+.paymentDetailProduct .description, .price, .quantity{
+    font-size: 14px;
+}
+
+.hrPaymentProduct{
+    background-color: #000000;
+    margin: 0;
+    width: 98%;
+}
+
+/* RESUMEN PAGO
+-------------------------------------------------- */
+
+.asidePaymentResume{
+    /* position: sticky;
+    bottom: 0; */
+    background-color: var(--payment-card-bg-color);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 7px 8px 10px -5px #b3b3b3;
+}
+
+.headAsidePayment{
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.headAsidePayment button{
+    margin: 0;
+    background-color: var(--primary-color-plantilla-low);
+}
+
+.headAsidePayment button:hover{
+    background-color: var(--primary-color-plantilla);
+}
+
+.paymentTotal{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.textAsidePayment{
+    color: black;
+    font-weight: 400;
+}
+
+.envio{
+    color: #599959;
+    font-weight: 400;
+}
+
+.total{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.totalFinal{
+    font-size: 18px;
+    font-weight: bolder;
+    color: #ff3737;
+}
+
+.productsTotal,.envioTotal, .final{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartFull{
+    border: none;
+    padding: 8px;
+    color: white;
+    background-color: var(--primary-color-plantilla);
+    font-size: 12px;
+    border-radius: 7px;
+}
+
+.badgePers{
+    font-size: 13px;
+    padding: 4px 7px;
+}
+
+.accordion-button{
+    /* color: #000000; */
+    font-weight: 400 !important;
+}
+
+.textAccordion{
+    color: #000000;
+}
+
+.payTransfer, .payCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.payTransfer figure{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.imgPayTransfer{
+    width: 50px;
+}
+
+.payCard figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgPayCard{
+    width: 200px;
+}
+
+/* MEDIA QUERYS
+-------------------------------------------------- */
+
+@media screen and (min-width: 520px) {
+    .containerPayment{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .paymentProductos{
+        display: block;
+    }
+
+    .payTittleProducts{
+        display: block;
+    }
+
+    .containerPayment{
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .asidePaymentResume{
+        height: fit-content;
+        position: sticky;
+        top: 20px;
+    }
+
+    .headAsidePayment{
+        justify-content: center;
+    }
+
+    .headAsidePayment button{
+        display: none;
+    }
+}
+
+/*=============================================
+=                   PRUEBAS XD                   =
+=============================================*/
+
+/* SOMBRA EN CARDS DE PROCESO DE PAGO */
+
+/*box-shadow: 7px 8px 10px -5px #424242;
+
+/*============  End of PRUEBAS XD  =============*/
