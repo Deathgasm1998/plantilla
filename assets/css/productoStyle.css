@@ -1234,11 +1234,7 @@ input[type=radio] {
     } 
 }
 
-@media screen and (min-width: 1280px) {
-    .cardContainer{
-        width: 70%;
-    }
-}
+
 
 /*=============================================
 =                   CARRITO                   =
@@ -1599,7 +1595,7 @@ input[type=radio] {
     .asidePaymentResume{
         height: fit-content;
         position: sticky;
-        top: 20px;
+        top: 90px;
     }
 
     .headAsidePayment{
