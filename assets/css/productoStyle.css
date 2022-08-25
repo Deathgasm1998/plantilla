@@ -523,3 +523,85 @@
 /*=================================================
 =                   MIS COMPRAS                   =
 =================================================*/
+
+.main-card{
+    box-shadow: 5px 5px 9px 0px rgb(0 0 0 / 55%);
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+}
+
+.hrCompras{
+    background-color: #000000;
+    margin: 0;
+}
+
+.main-card__body{
+    display: flex;
+    flex-direction: column;
+
+    /* display: grid; */
+    /* grid-template-columns: 2fr 1fr; */
+}
+
+.content-left__product{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border-bottom: solid;
+    border-width: 1px;
+    padding-bottom: 10px;
+}
+
+.content-left__product-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.content-left__product-img img{
+    width: 50px;
+    height: 50px;
+}
+
+.content-left__product-detail h6,p{
+    margin: 0;
+}
+
+.product-detail__cantPrecio{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.product-detail__cantPrecio p{
+    font-size: 14px;
+}
+
+.product-detail__btnCalificar{
+    margin: 0;
+    padding: 4px 8px;
+    font-size: 11px;
+}
+
+.main-card__content-right{
+    padding: 1px 15px;
+}
+
+.main-card__content-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imgCompras{
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (min-width: 650px) {
+    .main-card__body{
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+}
